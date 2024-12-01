@@ -4,7 +4,7 @@ from aoc_2024.day_1_1 import list_max_value
 # algorithm for the solution. Though I will adapt in this context.
 
 
-# this is the same hystogram system used in the integer_sort
+# this is the same histogram system used in the integer_sort
 # that I implemented in the first part of the problem
 def count_number(list_: list[int]) -> list[int]:
     # time O(n), memory O(1)

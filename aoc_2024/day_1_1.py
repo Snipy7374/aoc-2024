@@ -28,7 +28,7 @@ def integer_sort(list_: list[int]) -> None:
     # time O(n), memory O(1)
     n_max = list_max_value(list_) + 1
 
-    # inizialize the hystogram
+    # inizialize the histogram
     # time and memory O(n)
     x = [0 for _ in range(n_max)]
 
