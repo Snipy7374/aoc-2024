@@ -1,8 +1,8 @@
+from aoc_2024.constants import ASSETS_PATH
 # The problem can be solved by sorting the lists and making the calculations
 # as such the given problem, with the classic sorting solutions, is Omega(n log(n))
 # hovewer we know the type of the items contained in the lists!
 # They're always integers, as such we can use some peculiar algorithm that sorts in O(n)!
-from constants import ASSETS_PATH
 
 
 # time complexity: O(n)
@@ -75,25 +75,6 @@ def list_distance(a: list[int], b: list[int]) -> int:
         
         result += abs(a_val - b_val)
     return result
-
-
-if __name__ == "__main__":
-    a: list[int] = []
-    b: list[int] = []
-    with open(ASSETS_PATH / "day_1.txt") as f:
-        data = f.readlines()
-    
-    for pair in data:
-        splitted = pair.split("   ")
-
-        try:
-            a.append(int(splitted[0].strip()))
-            b.append(int(splitted[1].strip()))
-        except ValueError:
-            print("An error occurred while casting a string to int!")
-    
-    distance = list_distance(a, b)
-    print(f"The distance between the two lists is: {distance}")
 
 
 # Post-submit thoughts:
