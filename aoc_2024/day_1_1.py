@@ -1,4 +1,3 @@
-from aoc_2024.constants import ASSETS_PATH
 # The problem can be solved by sorting the lists and making the calculations
 # as such the given problem, with the classic sorting solutions, is Omega(n log(n))
 # hovewer we know the type of the items contained in the lists!
@@ -7,12 +6,12 @@ from aoc_2024.constants import ASSETS_PATH
 
 # time complexity: O(n)
 # memory complexity: O(1)
-def list_max_value(l: list[int]) -> int:
-    _n_max = l[0]
-    for i in range(1, len(l)):
-        if l[i] > _n_max:
-            _n_max = l[i]
-    
+def list_max_value(list_: list[int]) -> int:
+    _n_max = list_[0]
+    for i in range(1, len(list_)):
+        if list_[i] > _n_max:
+            _n_max = list_[i]
+
     return _n_max
 
 
@@ -25,9 +24,9 @@ def max_2(a: int, b: int) -> int:
 
 # time complexity: O(4n) ~ O(n)
 # memory complexity: O(n)
-def integer_sort(l: list[int]) -> None:
+def integer_sort(list_: list[int]) -> None:
     # time O(n), memory O(1)
-    n_max = list_max_value(l) + 1
+    n_max = list_max_value(list_) + 1
 
     # inizialize the hystogram
     # time and memory O(n)
@@ -35,7 +34,7 @@ def integer_sort(l: list[int]) -> None:
 
     # count the occurrence of the numbers
     # time O(n) memory O(1)
-    for n in l:
+    for n in list_:
         x[n] += 1
 
     # index to keep track what element of
@@ -44,7 +43,7 @@ def integer_sort(l: list[int]) -> None:
     # time O(n) memory O(1)
     for i in range(len(x)):
         while x[i] > 0:
-            l[f] = i
+            list_[f] = i
             x[i] -= 1
             f += 1
 
@@ -72,12 +71,12 @@ def list_distance(a: list[int], b: list[int]) -> int:
             b_val = b[i]
         except IndexError:
             b_val = 0
-        
+
         result += abs(a_val - b_val)
     return result
 
 
 # Post-submit thoughts:
 # the inputs were bigger than I thought, for even better performances it
-# could be better to use radix_sort which reduces memory usage with a little 
+# could be better to use radix_sort which reduces memory usage with a little
 # time complexity increase (O(n log(k))) or even better use pivot randomized quick_sort

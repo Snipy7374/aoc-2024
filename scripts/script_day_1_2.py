@@ -7,7 +7,7 @@ if __name__ == "__main__":
     b: list[int] = []
     with open(ASSETS_PATH / "day_1.txt") as f:
         data = f.readlines()
-    
+
     for pair in data:
         splitted = pair.split("   ")
 
@@ -16,6 +16,6 @@ if __name__ == "__main__":
             b.append(int(splitted[1].strip()))
         except ValueError:
             print("An error occurred while casting a string to int!")
-    
+
     similarity = list_similarity(a, b)
     print(f"The similarity between the two lists is: {similarity}")

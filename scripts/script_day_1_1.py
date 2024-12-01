@@ -7,7 +7,7 @@ if __name__ == "__main__":
     b: list[int] = []
     with open(ASSETS_PATH / "day_1.txt") as f:
         data = f.readlines()
-    
+
     for pair in data:
         splitted = pair.split("   ")
 
@@ -16,6 +16,6 @@ if __name__ == "__main__":
             b.append(int(splitted[1].strip()))
         except ValueError:
             print("An error occurred while casting a string to int!")
-    
+
     distance = list_distance(a, b)
     print(f"The distance between the two lists is: {distance}")
