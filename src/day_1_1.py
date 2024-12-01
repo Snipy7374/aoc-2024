@@ -2,7 +2,7 @@
 # as such the given problem, with the classic sorting solutions, is Omega(n log(n))
 # hovewer we know the type of the items contained in the lists!
 # They're always integers, as such we can use some peculiar algorithm that sorts in O(n)!
-from constanst import ASSETS_PATH
+from constants import ASSETS_PATH
 
 
 # time complexity: O(n)

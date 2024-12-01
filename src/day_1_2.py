@@ -1,6 +1,6 @@
 # The second part of the problem is even easier, I already implemented the core
 # algorithm for the solution. Though I will adapt in this context.
-from constanst import ASSETS_PATH
+from constants import ASSETS_PATH
 from day_1_1 import list_max_value
 
 
