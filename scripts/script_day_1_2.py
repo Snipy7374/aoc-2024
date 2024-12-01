@@ -1,4 +1,4 @@
-from aoc_2024.constants import ASSETS_PATH
+from scripts.constants import ASSETS_PATH
 from aoc_2024.day_1_2 import list_similarity
 
 
