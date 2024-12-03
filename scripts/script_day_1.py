@@ -1,5 +1,5 @@
 from scripts.constants import ASSETS_PATH
-from aoc_2024.day_1_1 import list_distance
+from aoc_2024.day_1 import list_distance, list_similarity
 
 
 if __name__ == "__main__":
@@ -19,3 +19,6 @@ if __name__ == "__main__":
 
     distance = list_distance(a, b)
     print(f"The distance between the two lists is: {distance}")
+
+    similarity = list_similarity(a, b)
+    print(f"The similarity between the two lists is: {similarity}")
