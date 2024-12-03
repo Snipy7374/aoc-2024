@@ -106,11 +106,11 @@ def count_number(list_: list[int]) -> list[int]:
 # time complexity: O(2n) ~ O(n)
 # memory complexity: O(n)
 def list_similarity(a: list[int], b: list[int]) -> int:
-    hystogram = count_number(b)
+    histogram = count_number(b)
     similarity = 0
 
     for n in a:
-        similarity += n * hystogram[n]
+        similarity += n * histogram[n]
 
     return similarity
 
